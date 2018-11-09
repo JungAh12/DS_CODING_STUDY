@@ -8,7 +8,8 @@ black-height
 ![kakaotalk_20181108_215618978](https://user-images.githubusercontent.com/41552919/48200277-00a7bc80-e3a2-11e8-8d3c-3443725bfbac.jpg)
 
 ```exercises```
-1-1
+**1-1**
+![rbt1-1](https://user-images.githubusercontent.com/41552919/48240566-95e49880-e416-11e8-9efd-d29b7856d079.jpg)
 1-3
 1-6
 
