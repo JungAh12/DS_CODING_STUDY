@@ -69,7 +69,9 @@ MEMOIZDE-CUT-ROD-AUX(p, n, r){
 
 ### 15.4 Longest common subsequence
 ```exercises```
-**1-1**
+**4-1**
+010101
+100110
 
 ### 15.5 Optimal binary search trees
 ```exercises```
