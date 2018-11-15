@@ -4,7 +4,29 @@
 
 ### 15.1 Rod cutting
 ```exercises```
-**1-1**
+**1-4**
+```
+MEMOIZED-CUT-ROD(p,n) { 
+  r[0...n]을 새로운 배열이라 한다.
+    for(i = 0; i<n; i++){
+      r[i] = -1;
+    }
+  return MEMOIZED-CUT-ROD-AUX(p, n, r)
+}
+
+MEMOIZDE-CUT-ROD-AUX(p, n, r){
+  if(r[n]>=0) return r[n];
+  if(r==0) q=0;
+  else{
+    q = -1;
+    for (i = 0; i<n; i++){
+    q = max(q, p[i]+MEMOIZDE-CUT-ROD-AUX(p, n-1, r));
+    }
+  }
+  r[n]=q;
+  return q;
+}
+```
 
 ### 15.2 Matrix-chain multiplication
 ```exercises```
