@@ -1,6 +1,6 @@
 # 덕성여대 IT미디어공학과 코딩스터디 Github
 
-* 도서 : 알고리즘해결전략 1
+* 도서 : top coder / introduction to algorithm
 
 * 기간 : 2019년 개강전까지 (* 기간 연장은 추후 공지)
 
