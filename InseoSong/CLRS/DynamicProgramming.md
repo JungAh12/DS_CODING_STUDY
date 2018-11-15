@@ -75,4 +75,7 @@ MEMOIZDE-CUT-ROD-AUX(p, n, r){
 
 ### 15.5 Optimal binary search trees
 ```exercises```
-**1-1**
+**5-2**
+![kakaotalk_20181115_222604393](https://user-images.githubusercontent.com/41552919/48555786-8e952180-e925-11e8-9443-12786d3ae5c2.jpg)
+
+
