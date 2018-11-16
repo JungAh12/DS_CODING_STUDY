@@ -1,4 +1,3 @@
-```C++
 #include <vector>
 #include <iostream>
 
@@ -35,4 +34,3 @@ public: vector<int> thePouring(vector<int> capacities, vector<int> bottles, vect
 //	kiwiJuiceEasy input;
 
 //}
-```
