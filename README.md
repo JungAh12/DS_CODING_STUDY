@@ -1,6 +1,6 @@
 # 덕성여대 IT미디어공학과 코딩스터디 Github
 
-* 도서 : top coder / introduction to algorithm
+* 도서 : [top coder](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=32516914) / [introduction to algorithm](https://labs.xjtudlc.com/labs/wldmt/reading%20list/books/Algorithms%20and%20optimization/Introduction%20to%20Algorithms.pdf)
 
 * 기간 : 2019년 개강전까지 (* 기간 연장은 추후 공지)
 
@@ -23,5 +23,5 @@
 
 ### 벌금 목록 ###
 
-2018.11.09: 송인서(2,000)
-2018.11.16: 심세영(2,000); 이하연(2,000); 송인서(2,000)
++ 2018.11.09: 송인서(2,000)
++ 2018.11.16: 심세영(2,000); 이하연(2,000); 송인서(2,000)
