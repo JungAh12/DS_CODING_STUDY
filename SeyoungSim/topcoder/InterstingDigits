@@ -1,0 +1,35 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+class InterestingDigits {
+public:
+	vector<int> digits(int base)
+	{
+		vector<int> ans;
+
+		for (int i = 2; i < base; i++) { // base와 1의 차이가 i로 나누어 떨어지면 어떤 자릿수라도 base로 나눈 나머지가 동일하다
+			if (((base - 1) % i) == 0) {
+				ans.push_back(i);
+			}
+		}
+		return ans;
+	}
+	};
+
+int main() {
+	int base;
+
+	cin >> base;
+
+	InterestingDigits in = InterestingDigits();
+
+	vector<int> ans = in.digits(base);
+
+	for (int i = 0; i < ans.size(); i++) {
+		cout << ans[i] << endl;
+	}
+
+	return 0;
+}
