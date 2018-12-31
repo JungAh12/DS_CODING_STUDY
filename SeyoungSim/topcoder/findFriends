@@ -1,0 +1,52 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+
+class findFriends {
+
+public: 
+	int find(vector<string> f) {
+
+		int Max=0; // 최대 친구의 수
+		int count; // 친구 수 세기
+
+		for (int i = 0; i < f.size(); i++) {
+
+			int count = 0; // vector의 각원소마다 count초기화
+
+			for (int j = 0; j < f[i].length(); j++) { // 원소별 친구 수 확인
+
+				if (i == j) // 나 자신은 확인하지 않음
+					continue;
+
+				if (f[i][j]== 'Y') // 친구이다
+					count++;
+
+				else { 
+					for (int k = 0; k < f[i].length(); k++) { 
+						if (f[i][k] == 'Y' && f[k][j] == 'Y') { // 나와 친구이고 내가 친구인 친구와 친구이면
+							count++; // 나와도 친구이다
+							break;
+						}
+							
+					}
+				}
+			}
+			Max = max(Max, count); // 가장 친구가 많은 사람의 친구 수 구하기
+		}
+
+		return Max;
+	}
+};
+
+void main() {
+
+	vector<string> f = { "NNNNYNNNNN","NNNNYNYYNN","NNNYYYNNNN","NNYNNNNNNN","YYYNNNNNNY","NNYNNNNNYN" ,"NYNNNNNYNN","NYNNNNYNNM","NNNNNYNNNN","NNNNYNNNNN"};
+	findFriends	find = findFriends();
+
+	cout << find.find(f) << endl;
+
+}
