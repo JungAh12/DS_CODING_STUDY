@@ -16,7 +16,21 @@ public:
 	static double answer;
 
 	bool visited[GRID_SIZE][GRID_SIZE] = { false };
+	
+	CrazyBot(){
+		cin >> n;
+		cin >> prob[0];
+		cin >> prob[1];
+		cin >> prob[2];
+		cin >> prob[3];
 
+		for (int i = 0; i < 4; i++) {
+			prob[i] /= 100;
+		}
+
+		answer = 0;
+		move(0, START, START, visited);
+	}
 	static double move(int cur, int x, int y, bool visited[][GRID_SIZE]) {
 		
 		double p = 1;
@@ -44,15 +58,6 @@ public:
 int main() {
 
 	CrazyBot* bot = new CrazyBot;
-
-	cin >> bot->n;
-	cin >> bot->prob[0];
-	cin >> bot->prob[1];
-	cin >> bot->prob[2];
-	cin >> bot->prob[3];
-
-	bot->answer = 0;
-	bot->move(0, START, START, bot->visited);
 	cout << bot->answer << std::endl;
 
 	return 0;
