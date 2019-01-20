@@ -1,0 +1,42 @@
+package codingstudy;
+
+import java.util.Scanner;
+
+public class NumberMagicEasy {
+
+	public void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		String answer = input.next();
+		
+		theNumber(answer); // 대답을 함수에 넣어준다
+	}
+	
+	public int theNumber(String answer) 
+	{
+		int []A = {1,2,3,4,5,6,7,8};
+		int []B = {1,2,3,4,9,10,11,12};
+		int []C = {1,2,5,6,9,10,13,14};
+		int []D = {1,3,5,7,9,11,13,15};
+		
+		for(int i=1;i<=16;i++)
+		{
+			if(CheckNumber(A,i) != answer.charAt(0)) continue;
+			if(CheckNumber(B,i) != answer.charAt(1)) continue;
+			if(CheckNumber(C,i) != answer.charAt(2)) continue;
+			if(CheckNumber(D,i) != answer.charAt(3)) continue;
+			return i;
+		}
+		
+		return 0;
+	}
+	
+	char CheckNumber(int [] X,int number)
+	{
+		for(int x:X) {
+			if(x == number) return 'y';
+			
+		}
+		return 'n';
+	}
+}
