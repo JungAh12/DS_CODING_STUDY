@@ -17,7 +17,10 @@ public:
 	int findNumber(string input) {
 	
 		for (int i = 0; i < 16; i++) {
-			if (input[0]==cards[0][i] && input[1]==cards[1][i] && input[2]==cards[2][i] && input[3]==cards[3][i]) return i+1;
+			if (input[0]==cards[0][i] &&
+			    input[1]==cards[1][i] &&
+			    input[2]==cards[2][i] &&
+			    input[3]==cards[3][i]) return i+1;
 		}
 	}
 };
