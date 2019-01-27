@@ -1,0 +1,52 @@
+*탐색을 이용한 해법 : 시간이 많이 걸림
+*수학적 해법 : 문제가 조금이라도 변경된다면 대응할 수 없는 경우가 있음
+
+*메모화 재귀를 사용한 해법
+ 메모화 재귀-동적 계획법을 재귀적으로 사용하는 방법, 동적 계획법의 일종이라고도 볼 수 있음
+           -배열등을 이용하여 반복되는 부분을 저장해 두었다가 사용
+           
+           ex1) 깊이 우선 탐색
+           final int h =5, w=4;
+           
+           int dfs(int nowh, int noww)
+           {
+              if(nowh>h || noww > w) return 0;
+              if(nowh == h && noww == w ) return 1;
+              return dfs(nowh+1, noww) + dfs(nowh, noww+1);
+           }
+           
+           ex2) 메모리 재귀화
+           const int h=5, w = 4;
+           int[][] dp = new int[h+1][w+1];
+           
+           int dfs(int nowh,int noww)
+           {
+              if(nowh > h || noww >w ) return 0;
+              if(nowh == h && noww == w) return 1;
+              if(dp[nowh][noww] != 0 ) return dp[nowh][noww];
+              return dp[nowh][noww] = dfs(nowh + 1, noww) + dfs(nowh, noww + 1);
+           }
+           
+           ex1 과 비교하여 메모에 쓸 배열을 준비하고 탐색 결과가 저장되어 있을 경우 그 값을 리턴함
+           
+* 동적 계획법을 사용한 해법 - 상향식 방법을 이용
+
+        ex)  final int h =5, w=4;
+             int[][] dp = new int[h+1][w+1];
+             
+             void calc()
+             {
+                int i,j;
+                dp[0][0] = 1;
+                for( int =0; i<=h;i++)
+                {
+                    for(j=0;j<=w;j++)
+                    {
+                      if ( i != 0) dp[i][j] += dp[i-1][j];
+                      if  (j != 0) dp[i][j] += dp[i][j-1];
+                    }
+                    
+                 }
+                 
+               }
+           
