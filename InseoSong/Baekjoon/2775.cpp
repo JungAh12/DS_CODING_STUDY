@@ -9,7 +9,7 @@ int count(int k, int n) {
 		return n;
 	}
 	else {
-		for (int i = n-1; i > 0; i++) {
+		for (int i = n; i > 0; i--) {
 			ans += count(k-1, i);
 		}
 	}
