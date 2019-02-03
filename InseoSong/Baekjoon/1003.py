@@ -23,5 +23,4 @@ t = int(input())
 for i in range(t):
     n = int(input())
     fib(n)
-    # print(cnt)
     print(cnt[0][n], cnt[1][n])
